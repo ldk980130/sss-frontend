@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
-function Home({setIsLoggedIn}) {
+function Home() {
     const [users, setUsers] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -32,7 +32,6 @@ function Home({setIsLoggedIn}) {
     return (
         <div>    
             <h1>Home</h1>
-            <button onClick={()=>setIsLoggedIn(false)}>Log Out!</button>
             <ul>
                 {users.map(user => (
                     <li key={user.id}>

@@ -1,8 +1,7 @@
-function Login({setIsLoggedIn}) {
+function Login() {
     return (
         <div>
-            <h1>Login</h1>
-            <button onClick={()=>setIsLoggedIn(true)}>Log In!</button>
+            <h1>Login</h1>    
         </div>
     );
 }
