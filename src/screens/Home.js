@@ -33,7 +33,7 @@ function Home() {
         <div>    
             <h1>Home</h1>
             <ul>
-                {user.id},{user.title}
+                {users.id},{users.title}
             </ul>
         </div>
     );
