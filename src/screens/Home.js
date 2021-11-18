@@ -14,7 +14,7 @@ function Home() {
             setUsers(null);
             // loading 상태를 true 로 바꿉니다.
             setLoading(true);
-            const response = await axios.get('localhost:8080/api/v1/person');
+            const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
             setUsers(response.data); // 데이터는 response.data 안에 들어있습니다.
             } 
             catch (e) {
@@ -33,11 +33,7 @@ function Home() {
         <div>    
             <h1>Home</h1>
             <ul>
-                {users.map(user => (
-                    <li key={user.id}>
-                    {user.name}
-                    </li>
-                ))}
+                {user.id},{user.title}
             </ul>
         </div>
     );
