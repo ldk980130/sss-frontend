@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logo from '../images/logo.png';
 import { Link } from "react-router-dom";
-import { Text, Flex } from "./shared";
+import { Text, Flexrow } from "./shared";
 import routes from "../routes";
 
 const HeaderContainer = styled.div`
@@ -30,14 +30,14 @@ function Header() {
                 </Link>
             </LogoContainer>
             <LinkContainer>
-                <Flex>
-                    <Text right='40px' top='50px'>
+                <Flexrow>
+                    <Text right='40px' top='55px'>
                         <Link to ={routes.logIn} style={{ textDecoration: 'none', color: '#565656' }}>로그인</Link>
                     </Text>
-                    <Text top='50px'>
+                    <Text top='55px'>
                     <Link to ={routes.signUp} style={{ textDecoration: 'none', color: '#565656' }}>회원가입</Link>
                     </Text>
-                </Flex>
+                </Flexrow>
             </LinkContainer>
         </HeaderContainer>
     );

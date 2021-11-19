@@ -7,9 +7,14 @@ export const Container = styled.div`
     padding: 30px;
 `;
 
-export const Flex = styled.div`
+export const Flexrow = styled.div`
     display: flex;
-    flex-direction: row;
+    align-items: center;
+`;
+
+export const Column = styled.div`
+    display: flex;
+    flex-direction: column;
     align-items: center;
 `;
 
@@ -24,10 +29,6 @@ export const Subtitle = styled.div`
 export const Input = styled.input`
     width: 400px;
     height: 50px;
-    @media only screen and (max-width: 400px) {
-        width: 100%;
-        height: 50px;
-    }
     border: 0.5px solid ${(props) => (props.hasError ? "tomato" : props.theme.borderColor)};
     padding: 0 20px;
     margin-top: 25px;
@@ -45,8 +46,8 @@ export const Submitbutton = styled.input`
     border:none;
     border-radius: 30px;
     margin-top:30px;
-    margin-left: 200px;
-    background-color: #00C5A7;
+    margin-left: 300px;
+    background-color: #C4C4C4;
     color: white;
     text-align:center;
     padding: 8px 0px;
@@ -58,7 +59,8 @@ export const Submitbutton = styled.input`
 
 export const Text = styled.div`
     margin-top: ${ props => props.top };
+    margin-bottom: ${ props => props.bottom };
     margin-right: ${ props => props.right };
-    font-size: 24px;
+    font-size: ${ props => props.size };
     color: #565656;
 `;
