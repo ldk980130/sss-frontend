@@ -10,8 +10,9 @@ export const GlobalStyles = createGlobalStyle`
             font-weight: normal;
             font-style: normal;
         }
+        font-family: 'GmarketSansMedium'
     }
     body{
-        font-size:17px;
+        font-size:24px;
     }
 `;
