@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import Footer from "../Components/Footer";
 
 function Home() {
     const [users, setUsers] = useState(null);
@@ -30,12 +31,13 @@ function Home() {
     if (!users) return null;
 
     return (
-        <div>    
+        <>    
             <h1>Home</h1>
             <ul>
                 {users.id},{users.title}
             </ul>
-        </div>
+            <Footer />
+        </>
     );
 }
 export default Home;

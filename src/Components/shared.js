@@ -9,11 +9,10 @@ export const Container = styled.div`
 
 export const Flexrow = styled.div`
     display: flex;
-    flex-direction: row;
     align-items: center;
 `;
 
-export const Flexcolumn = styled.div`
+export const Column = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,6 +59,7 @@ export const Submitbutton = styled.input`
 
 export const Text = styled.div`
     margin-top: ${ props => props.top };
+    margin-bottom: ${ props => props.bottom };
     margin-right: ${ props => props.right };
     font-size: ${ props => props.size };
     color: #565656;
