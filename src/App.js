@@ -3,12 +3,16 @@ import Home from "./Screens/Home";
 import Login from "./Screens/Login";
 import Signup from "./Screens/Signup";
 import routes from "./routes";
+import Header from "./Components/Header";
+import { GlobalStyles } from "./styles";
  
 function App() {
 
   return (
-    <div>
+    <>
+    <GlobalStyles />
       <Router>
+        <Header />
         <Switch>
           <Route path={routes.home} exact>
             <Home />
@@ -21,7 +25,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </>
   );
 }
  
