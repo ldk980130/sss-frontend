@@ -9,16 +9,18 @@ const FooterContainer = styled.footer`
     background-color: white;
 `;
 
-const TextContainer = styled.footer`
+const TextContainer = styled.div`
     position: absolute;
-    right: 50px;
+    right: ${ props => props.right };
+    left: ${ props => props.left };
 `;
 
 
 function Footer() {
     return (
         <FooterContainer>
-            <TextContainer><Text size="17px"> subscription sharing service 2021 © </Text></TextContainer>
+            <TextContainer left="30px"><Text size="15px"> 오류 제보 </Text></TextContainer>
+            <TextContainer right="50px"><Text size="17px"> subscription sharing service 2021 © </Text></TextContainer>
         </FooterContainer>
     );
   }
