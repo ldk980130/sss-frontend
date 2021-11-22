@@ -1,3 +1,5 @@
+import PersonList from './GetData';
+
 const BoardContent = (props) => {
     if (props.board === 99) {
         return (
@@ -6,7 +8,14 @@ const BoardContent = (props) => {
       }
     if (props.board === 0) {
         return (
+        <div>
           <div>왓챠 자유게시판</div>
+          <br/>
+          <div>
+            **통신 테스트**<br/><hr/>
+            <PersonList />
+          </div>
+        </div>
         )
       }
       if (props.board === 1) {

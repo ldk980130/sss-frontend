@@ -5,7 +5,7 @@ import Signup from "./Screens/Signup";
 import routes from "./routes";
 import Header from "./Components/Header";
 import { GlobalStyles } from "./styles";
- 
+
 function App() {
 
   return (
@@ -28,5 +28,5 @@ function App() {
     </>
   );
 }
- 
+
 export default App;
