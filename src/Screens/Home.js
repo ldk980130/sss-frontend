@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import Footer from "../Components/Footer";
+import Board from '../Components/Board/Board';
+import Footer from '../Components/Footer';
 
 function Home() {
     const [users, setUsers] = useState(null);
@@ -32,10 +33,10 @@ function Home() {
 
     return (
         <>    
-            <h1>Home</h1>
             <ul>
                 {users.id},{users.title}
             </ul>
+            <Board />
             <Footer />
         </>
     );

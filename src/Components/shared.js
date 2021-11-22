@@ -29,14 +29,12 @@ export const Subtitle = styled.div`
 export const Input = styled.input`
     width: 400px;
     height: 50px;
-    border: 0.5px solid ${(props) => (props.hasError ? "tomato" : props.theme.borderColor)};
     padding: 0 20px;
     margin-top: 25px;
     margin-botton: 10px;
     border-radius: 10px;
     background-color:#fafafa;
     border: 1px solid #C4C4C4;
-    box-sizing:border-box;
     &::placeholder{
         font-size: 17px;
     }
@@ -51,7 +49,6 @@ export const Submitbutton = styled.input`
     color: white;
     text-align:center;
     padding: 8px 0px;
-    font-weight: 600;
     width: 120px;
     height: 60px;
     font-size: 17px;
@@ -63,4 +60,7 @@ export const Text = styled.div`
     margin-right: ${ props => props.right };
     font-size: ${ props => props.size };
     color: #565656;
+    &:hover {
+        color: ${ props => props.hover };
+      }
 `;

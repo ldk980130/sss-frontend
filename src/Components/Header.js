@@ -12,7 +12,7 @@ const HeaderContainer = styled.div`
 
 const LogoContainer = styled.div`
     position: absolute;
-    left: 40px;
+    margin-left: 40px;
 `;
 
 const LinkContainer = styled.div`
@@ -31,12 +31,8 @@ function Header() {
             </LogoContainer>
             <LinkContainer>
                 <Flexrow>
-                    <Text right='40px' top='55px'>
-                        <Link to ={routes.logIn} style={{ textDecoration: 'none', color: '#565656' }}>로그인</Link>
-                    </Text>
-                    <Text top='55px'>
-                    <Link to ={routes.signUp} style={{ textDecoration: 'none', color: '#565656' }}>회원가입</Link>
-                    </Text>
+                    <Link to ={routes.logIn} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>로그인</Text></Link>
+                    <Link to ={routes.signUp} style={{ textDecoration: 'none'}}><Text top='55px' hover='#828282'>회원가입</Text></Link>
                 </Flexrow>
             </LinkContainer>
         </HeaderContainer>
