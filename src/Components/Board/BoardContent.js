@@ -1,4 +1,4 @@
-import PersonList from './GetData';
+import GetData from './GetData';
 
 const BoardContent = (props) => {
     if (props.board === 99) {
@@ -13,7 +13,7 @@ const BoardContent = (props) => {
           <br/>
           <div>
             **통신 테스트**<br/><hr/>
-            <PersonList />
+            <GetData />
           </div>
         </div>
         )
