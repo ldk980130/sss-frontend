@@ -63,4 +63,5 @@ export const Text = styled.div`
     &:hover {
         color: ${ props => props.hover };
       }
+    cursor: ${ props => props.cursor };
 `;
