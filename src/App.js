@@ -5,14 +5,20 @@ import Signup from "./Screens/Signup";
 import routes from "./routes";
 import Header from "./Components/Header";
 import { GlobalStyles } from "./styles";
+import { useState } from "react";
 
 function App() {
+
+  //로그인상태
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  //임시
+  const logout = () => setIsLoggedIn(false);
 
   return (
     <>
     <GlobalStyles />
       <Router>
-        <Header />
+        <Header isLoggedIn={isLoggedIn} logout={logout} />
         <Switch>
           <Route path={routes.home} exact>
             <Home />

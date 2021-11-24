@@ -20,7 +20,7 @@ const LinkContainer = styled.div`
     right: 50px;
 `;
 
-function Header() {
+function Header(props) {
 
     return (
         <HeaderContainer>
@@ -31,8 +31,16 @@ function Header() {
             </LogoContainer>
             <LinkContainer>
                 <Flexrow>
-                    <Link to ={routes.logIn} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>로그인</Text></Link>
-                    <Link to ={routes.signUp} style={{ textDecoration: 'none'}}><Text top='55px' hover='#828282'>회원가입</Text></Link>
+                    {props.isLoggedIn ? (
+                        <Link to ={routes.home} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>마이페이지</Text></Link>
+                    ) : (
+                        <Link to ={routes.logIn} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>로그인</Text></Link>
+                    )}
+                    {props.isLoggedIn ? (
+                        <div onClick={props.logout} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282' cursor='pointer'>로그아웃</Text></div>
+                    ) : (
+                        <Link to ={routes.signUp} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>회원가입</Text></Link>
+                    )}
                 </Flexrow>
             </LinkContainer>
         </HeaderContainer>
