@@ -19,7 +19,7 @@ const TextContainer = styled.div`
 function Footer() {
     return (
         <FooterContainer>
-            <TextContainer left="30px"><Text size="15px"> 오류 제보 </Text></TextContainer>
+            <TextContainer left="30px"><Text size="15px" cursor='pointer'> 오류 제보 </Text></TextContainer>
             <TextContainer right="50px"><Text size="17px"> subscription sharing service 2021 © </Text></TextContainer>
         </FooterContainer>
     );

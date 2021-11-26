@@ -20,8 +20,7 @@ export const Column = styled.div`
 
 export const Subtitle = styled.div`
     margin-top: ${ props => props.top };
-    font-style: normal;
-    font-weight: normal;
+    margin-bottom: ${ props => props.bottom };
     font-size: 22px;
     color: #666666;
 `;
