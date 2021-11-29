@@ -53,7 +53,7 @@ export const Submitbutton = styled.input`
     font-size: 17px;
 `;
 
-export const Text = styled.div`
+export const Text = styled.span`
     margin-top: ${ props => props.top };
     margin-bottom: ${ props => props.bottom };
     margin-right: ${ props => props.right };

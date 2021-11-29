@@ -5,13 +5,12 @@ export default [
         title : "안녕하세여",
         content : "ㅎㅇㅎㅇ",
         author :'작성자A',
-        category: 'a'
     },
   
     {
         id : 1,
         title : "ㅎㅇㅎㅇㅎㅇ",
-        content : "ㅎㅇ",
+        content : "ㅎwefdfsfsdㅎ앟앙하sdfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafsazfxcvfdsfdaaaaaaaㅇ",
         author : 'B'
     },
   
