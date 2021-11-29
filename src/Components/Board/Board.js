@@ -37,7 +37,7 @@ const OttTab = (props) => {
         <TabItem onClick={()=>{ props.setOtt(0) }}>Watcha</TabItem>
         <TabItem onClick={()=>{ props.setOtt(1) }}>wave</TabItem>
         <TabItem onClick={()=>{ props.setOtt(2) }}>Spotify</TabItem>
-        <TabItem onClick={()=>{ props.setBoard(99) }}>OTT추가요청</TabItem>
+        <TabItem onClick={()=>{ props.setBoard(99); props.setOtt(99); }}>OTT추가요청</TabItem>
       </TabContainer>
     </>
   );
@@ -80,9 +80,15 @@ const BoardTab = (props) => {
       </>
     )
   }
+  if (props.ott === 99) {
+    return (
+      <>
+      </>
+    )
+  }
 };
 
-const Board = () => {
+const Board = (props) => {
   const [ott, setOtt] = useState(0);
   const [board, setBoard] = useState(0);
   return (
@@ -91,7 +97,7 @@ const Board = () => {
       <OttTab setOtt={setOtt} setBoard={setBoard} />
       <hr/>
       <BoardTab ott={ott} setBoard={setBoard}/>
-      <BoardContent board={board} ott={ott}/>
+      <BoardContent board={board} ott={ott} post={props.post}/>
     </>
   );
 };

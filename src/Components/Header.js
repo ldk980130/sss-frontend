@@ -18,6 +18,7 @@ const LogoContainer = styled.div`
 const LinkContainer = styled.div`
     position: absolute;
     right: 50px;
+    top: 50px;
 `;
 
 function Header(props) {

@@ -1,5 +1,4 @@
 import GetData from './GetData';
-import data from '../../data';
 import { useState } from 'react';
 import PostCard from './PostCard';
 import { Row } from 'react-bootstrap'; 
@@ -13,7 +12,6 @@ const PostContainer = styled.div`
 `;
 
 const BoardContent = (props) => {
-    let [post, setPost] = useState(data);
 
     if (props.board === 99) {
         return (
@@ -21,7 +19,7 @@ const BoardContent = (props) => {
           <Subtitle top='30px' bottom='20px'>OTT추가요청게시판</Subtitle>
           <Row className="g-4">
             {
-              post.slice(0).reverse().map((a,i)=>{ /*slice(0).reverse() -> 최신순으로 출력*/
+              props.post.slice(0).reverse().map((a,i)=>{ /*slice(0).reverse() -> 최신순으로 출력*/
                 return(
                     <PostCard post={a} i={i}></PostCard>
                 )

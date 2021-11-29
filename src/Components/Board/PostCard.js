@@ -1,15 +1,21 @@
-import React from 'react';
-import { Card, Col } from 'react-bootstrap'; 
+import { Card, Col } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import { Text } from "../shared";
 
 const PostCard = (props) => {
+    let preview = props.post.content.substring(0,19); /*20자 본문 미리보기*/
+    
     return (
     <Col>
-    <Card style={{ width: '300px', height: '200px' }}>
+    <Link to={"/detail/" + (props.i)} style={{ textDecoration: 'none' }}>
+    <Card style={{ width: '300px', height: '120px' }}>
       <Card.Body>
-        <Card.Title>{ props.post.title }</Card.Title>
-        <Card.Text>{ props.post.content } { props.post.author }</Card.Text>
+        <Card.Title><Text size='20px'>{ props.post.title }</Text> <Text size='12px'>by { props.post.author }</Text></Card.Title>
+        <hr/>
+        <Card.Text><Text size='17px'>{ preview }</Text></Card.Text>
       </Card.Body>
     </Card>
+    </Link>
     </Col>
     );
 };
