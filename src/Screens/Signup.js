@@ -17,7 +17,7 @@ function Signup() {
                 <Input placeholder="이름"></Input>
                 <Input placeholder="이메일"></Input>
                 <Input placeholder="한 줄 소개"></Input>
-                <Submitbutton type="submit" value={"가입하기 →"}></Submitbutton>
+                <Submitbutton mt='30px' ml='300px' type="submit" value={"가입하기 →"}></Submitbutton>
             </Column>
             </form>
             <Text top="40px" bottom="100px;">

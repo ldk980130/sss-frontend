@@ -42,8 +42,8 @@ export const Input = styled.input`
 export const Submitbutton = styled.input`
     border:none;
     border-radius: 30px;
-    margin-top:30px;
-    margin-left: 300px;
+    margin-top: ${ props => props.mt };
+    margin-left: ${ props => props.ml };
     background-color: #C4C4C4;
     color: white;
     text-align:center;
@@ -63,4 +63,25 @@ export const Text = styled.span`
         color: ${ props => props.hover };
       }
     cursor: ${ props => props.cursor };
+`;
+
+export const Box = styled.div`
+    background: #F1F1F1;
+    border: 1px solid #C4C4C4;
+    border-radius: 20px;
+
+    padding: 50px;
+
+    width: ${ props => props.width };
+    height: ${ props => props.height };
+    margin-top: ${ props => props.top };
+    padding-top: ${ props => props.pt };
+    padding-bottom: ${ props => props.pb };
+`;
+
+export const Absolute = styled.div`
+    position: absolute;
+    left: ${ props => props.left };
+    right: ${ props => props.right };
+    bottom: ${ props => props.bottom };
 `;
