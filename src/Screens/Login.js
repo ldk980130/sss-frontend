@@ -1,7 +1,22 @@
+import styled from "styled-components";
 import { Container, Subtitle, Input, Submitbutton, Text, Column } from "../Components/shared";
 import { Link } from "react-router-dom";
 import routes from "../routes";
 import Footer from "../Components/Footer";
+
+export const CommentInput = styled.input`
+    width: 600px;
+    height: 50px;
+    padding: 0 20px;
+    margin-top: 25px;
+    margin-botton: 10px;
+    border-radius: 10px;
+    background-color:#fafafa;
+    border: 1px solid #C4C4C4;
+    &::placeholder{
+        font-size: 13px;
+    }
+`;
 
 function Login() {
     return (
@@ -12,7 +27,7 @@ function Login() {
                 <Column>
                 <Input placeholder="아이디"/>
                 <Input placeholder="비밀번호"/>
-                <Submitbutton type="submit" value={"로그인 →"}></Submitbutton>
+                <Submitbutton mt='30px' ml='300px' type="submit" value={"로그인 →"}></Submitbutton>
                 </Column>
             </form>
             <Text top="120px">
