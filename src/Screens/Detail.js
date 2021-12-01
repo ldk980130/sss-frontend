@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom';
-import { Container, Box, Text, Absolute, Submitbutton } from "../Components/shared";
+import { Container, Box, Text, Absolute, Submitbutton, Row } from "../Components/shared";
 import styled from "styled-components";
+import Footer from '../Components/Footer';
 
-export const CommentInput = styled.input`
-    width: 550px;
-    height: 50px;
-    padding: 0 20px;
+export const CommentInput = styled.textarea`
+    width: 570px;
+    height: 70px;
+    padding: 10px;
     border-radius: 10px;
     background-color:#fafafa;
     border: 1px solid #C4C4C4;
@@ -22,6 +23,7 @@ const Detail = (props) => {
       });
 
     return (
+        <>
         <Container>
             <Box width='800px'>
                 <Text size='23px'>{ viewpost.title }</Text><Text size='12px'> { viewpost.author }</Text>
@@ -29,14 +31,16 @@ const Detail = (props) => {
                 <Text size='17px'>{ viewpost.content }</Text>
                 <Absolute></Absolute>
             </Box>
-            <Box width='800px' top='30px' pt='20px' pb='20px'>
-                <CommentInput placeholder='댓글'></CommentInput>
-                <Submitbutton ml='20px' type="submit" value={"댓글 작성"}></Submitbutton>
-            </Box>
+            <Box width='800px' top='30px' pt='10px' pb='10px'><Row>
+                <div><CommentInput placeholder='댓글'></CommentInput></div>
+                <Submitbutton ml='40px' type="submit" value={"댓글 작성"}></Submitbutton>
+            </Row></Box>
             <Box width='700px' top='20px' pt='20px' pb='20px'>
                 <Text size='15px'>댓글들</Text>
             </Box>
         </Container>
+        <Footer />
+        </>
     );
 };
 

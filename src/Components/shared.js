@@ -7,7 +7,7 @@ export const Container = styled.div`
     padding: 30px;
 `;
 
-export const Flexrow = styled.div`
+export const Row = styled.div`
     display: flex;
     align-items: center;
 `;
@@ -43,10 +43,10 @@ export const Submitbutton = styled.input`
     border:none;
     border-radius: 30px;
     margin-top: ${ props => props.mt };
+    margin-bottom: ${ props => props.mb };
     margin-left: ${ props => props.ml };
     background-color: #C4C4C4;
     color: white;
-    text-align:center;
     padding: 8px 0px;
     width: 120px;
     height: 60px;
@@ -70,7 +70,7 @@ export const Box = styled.div`
     border: 1px solid #C4C4C4;
     border-radius: 20px;
 
-    padding: 50px;
+    padding: 40px;
 
     width: ${ props => props.width };
     height: ${ props => props.height };
@@ -81,6 +81,7 @@ export const Box = styled.div`
 
 export const Absolute = styled.div`
     position: absolute;
+    top: ${ props => props.top };
     left: ${ props => props.left };
     right: ${ props => props.right };
     bottom: ${ props => props.bottom };

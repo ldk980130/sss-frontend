@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logo from '../images/logo.png';
 import { Link } from "react-router-dom";
-import { Text, Flexrow } from "./shared";
+import { Text, Row } from "./shared";
 import routes from "../routes";
 
 const HeaderContainer = styled.div`
@@ -31,7 +31,7 @@ function Header(props) {
                 </Link>
             </LogoContainer>
             <LinkContainer>
-                <Flexrow>
+                <Row>
                     {props.isLoggedIn ? (
                         <Link to ={routes.home} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>마이페이지</Text></Link>
                     ) : (
@@ -42,7 +42,7 @@ function Header(props) {
                     ) : (
                         <Link to ={routes.signUp} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>회원가입</Text></Link>
                     )}
-                </Flexrow>
+                </Row>
             </LinkContainer>
         </HeaderContainer>
     );
