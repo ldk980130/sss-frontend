@@ -3,6 +3,7 @@ import Home from "./Screens/Home";
 import Login from "./Screens/Login";
 import Signup from "./Screens/Signup";
 import Detail from "./Screens/Detail";
+import Create from "./Screens/Create";
 import routes from "./routes";
 import Header from "./Components/Header";
 import { GlobalStyles } from "./styles";
@@ -28,13 +29,16 @@ function App() {
         <Header isLoggedIn={isLoggedIn} logout={logout} />
         <Switch>
           <Route path={routes.home} exact>
-            <Home post={post}/>
+            <Home isLoggedIn={isLoggedIn} post={post}/>
           </Route>
           <Route path={routes.logIn} exact>
             <Login />
           </Route>
           <Route path={routes.signUp} exact>
             <Signup />
+          </Route>
+          <Route path={routes.create} exact>
+            <Create />
           </Route>
           <Route path="/detail/:id" exact>
             <Detail post={post}/>

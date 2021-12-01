@@ -93,7 +93,7 @@ const Board = (props) => {
   const [board, setBoard] = useState(0);
   return (
     <>
-      <BoardHeader/>
+      <BoardHeader isLoggedIn={props.isLoggedIn}/>
       <OttTab setOtt={setOtt} setBoard={setBoard} />
       <hr/>
       <BoardTab ott={ott} setBoard={setBoard}/>

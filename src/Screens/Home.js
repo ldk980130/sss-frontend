@@ -4,7 +4,7 @@ import Footer from '../Components/Footer';
 function Home(props) {
     return (
         <>    
-            <Board post={props.post}/>
+            <Board post={props.post} isLoggedIn={props.isLoggedIn}/>
             <Footer />
         </>
     );
