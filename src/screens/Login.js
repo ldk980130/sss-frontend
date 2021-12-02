@@ -3,6 +3,8 @@ import { Container, Subtitle, Input, Submitbutton, Text, Column } from "../Compo
 import { Link } from "react-router-dom";
 import routes from "../routes";
 import Footer from "../Components/Footer";
+import React,{ useState } from 'react';
+import axios from 'axios';
 
 export const CommentInput = styled.input`
     width: 600px;
@@ -19,14 +21,41 @@ export const CommentInput = styled.input`
 `;
 
 function Login() {
+    const url = "http://localhost:5000/api/login"
+    const [data, setData] = useState({
+        userID:"",
+        userPW:""
+    })
+
+    function submit(e){
+        e.preventDefault();
+        axios.post(url,{
+            userID: data.userID,
+            userPW: data.userPW
+        },{
+            headers: {'Content-Type': 'application/json'}
+            }).then(res=>{
+            console.log(res.data);
+        }).catch(error=>{
+            console.log(error);
+        })
+    }
+
+    function handle(e){
+        const newdata={...data}
+        newdata[e.target.id] = e.target.value
+        setData(newdata)
+        console.log(newdata)
+    }
+
     return (
         <>
         <Container>
             <Subtitle top="10px">로그인</Subtitle>
-            <form>
+            <form onSubmit={(e)=> submit(e)}>
                 <Column>
-                <Input placeholder="아이디"/>
-                <Input placeholder="비밀번호"/>
+                <Input onChange={(e)=>handle(e)} id="userID" value={data.userID} placeholder="아이디"/>
+                <Input onChange={(e)=>handle(e)} id="userPW" value={data.userPW} placeholder="비밀번호"/>
                 <Submitbutton mt='30px' ml='300px' type="submit" value={"로그인 →"}></Submitbutton>
                 </Column>
             </form>
