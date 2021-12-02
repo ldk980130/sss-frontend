@@ -21,7 +21,7 @@ export const CommentInput = styled.input`
 `;
 
 function Login() {
-    const url = "http://localhost:5000/api/login"
+    const url = "http://localhost:8080/login"
     const [data, setData] = useState({
         userID:"",
         userPW:""
