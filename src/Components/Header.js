@@ -33,7 +33,7 @@ function Header(props) {
             <LinkContainer>
                 <Row>
                     {props.isLoggedIn ? (
-                        <Link to ={routes.home} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>마이페이지</Text></Link>
+                        <Link to ={routes.mypage} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>마이페이지</Text></Link>
                     ) : (
                         <Link to ={routes.logIn} style={{ textDecoration: 'none'}}><Text right='40px' top='55px' hover='#828282'>로그인</Text></Link>
                     )}

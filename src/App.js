@@ -20,6 +20,7 @@ import data6 from "./data/data6";
 import data7 from "./data/data7";
 import data8 from "./data/data8";
 import data99 from "./data/data99";
+import data100 from "./data/data100";
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
   let [post7, setPost7] = useState(data7);
   let [post8, setPost8] = useState(data8);
   let [post99, setPost99] = useState(data99);
+  let [post100, setPost100] = useState(data100);
 
   return (
     <>
@@ -70,7 +72,7 @@ function App() {
             <Signup />
           </Route>
           <Route path={routes.mypage} exact>
-            <Mypage />
+            <Mypage post100={post100} />
           </Route>
           <Route path={routes.create} exact>
             <Create />
@@ -104,6 +106,9 @@ function App() {
           </Route>
           <Route path="/detail/99/:id" exact>
             <Detail post={post99}/>
+          </Route>
+          <Route path="/mypage/detail/:id" exact>
+            <Detail post={post100}/>
           </Route>
           <Redirect to="/" />
         </Switch>
