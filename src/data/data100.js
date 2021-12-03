@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* 마이페이지 내가 쓴 글 데이터 */
 export default [
     {
         id : 0,
