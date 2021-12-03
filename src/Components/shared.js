@@ -42,15 +42,18 @@ export const Input = styled.input`
 export const Submitbutton = styled.input`
     border:none;
     border-radius: 30px;
-    margin-top: ${ props => props.mt };
-    margin-bottom: ${ props => props.mb };
-    margin-left: ${ props => props.ml };
     background-color: #C4C4C4;
     color: white;
     padding: 8px 0px;
     width: 120px;
     height: 60px;
     font-size: 17px;
+
+    margin-top: ${ props => props.mt };
+    margin-bottom: ${ props => props.mb };
+    margin-left: ${ props => props.ml };
+    width: ${ props => props.width };
+    height: ${ props => props.height };
 `;
 
 export const Text = styled.span`
