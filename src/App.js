@@ -8,7 +8,7 @@ import Mypage from "./Screens/Mypage";
 import routes from "./routes";
 import Header from "./Components/Header";
 import { GlobalStyles } from "./styles";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import data0 from "./data/data0";
 import data1 from "./data/data1";
@@ -21,9 +21,6 @@ import data7 from "./data/data7";
 import data8 from "./data/data8";
 import data99 from "./data/data99";
 import data100 from "./data/data100";
-
-import customAxios from './customAxios'; 
-import axios from 'axios';
 
 function App() {
 
@@ -47,33 +44,11 @@ function App() {
   let [post99, setPost99] = useState(data99);
   let [post100, setPost100] = useState(data100);
 
-    // 요청받은 정보를 담아줄 변수 선언
-    const [ testStr, setTestStr ] = useState('');
-
-    // 변수 초기화
-    function callback(str) {
-      setTestStr(str);
-    }
-  
-    // 첫 번째 렌더링을 마친 후 실행
-    useEffect(
-        () => {
-          axios({
-              url: '/home',
-              method: 'GET'
-          }).then((res) => {
-              callback(res.data);
-          })
-        }, []
-    );
-  
-
   return (
     <>
     <GlobalStyles />
       <Router>
         <Header isLoggedIn={isLoggedIn} logout={logout} />
-        {testStr}
         <Switch>
           <Route path={routes.home} exact>
             <Home 
