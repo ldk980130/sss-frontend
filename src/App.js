@@ -9,6 +9,7 @@ import routes from "./routes";
 import Header from "./Components/Header";
 import { GlobalStyles } from "./styles";
 import { useState } from "react";
+import GetData from './data/GetData';
 
 import data0 from "./data/data0";
 import data1 from "./data/data1";
@@ -49,6 +50,7 @@ function App() {
     <GlobalStyles />
       <Router>
         <Header isLoggedIn={isLoggedIn} logout={logout} />
+        <GetData />
         <Switch>
           <Route path={routes.home} exact>
             <Home 
