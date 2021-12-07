@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import routes from "../routes";
 import Footer from "../Components/Footer";
 import axios from 'axios';
+import React,{ useState } from 'react';
 
 function Signup() {
     const url = "/signup"
