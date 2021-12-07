@@ -2,20 +2,20 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const GetData = () => {
-  const [persons, setPersons] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users')
+    axios.get('/home')
     .then(res => {
       console.log(res);
-      setPersons(res.data);
+      setPosts(res.data);
     });
   }, []);
 
   return (
     <div>
       <ul>
-        {persons.map(person => (<li key={person.id}>{person.name}&emsp;&emsp;&emsp;&emsp;&emsp; {person.username}</li>))}
+        {posts.map(posts => (<li key={posts.postId}>{posts.title}&emsp;{posts.nickName}&emsp;{posts.date}&emsp;{posts.content}</li>))}
       </ul>
     </div>
   );

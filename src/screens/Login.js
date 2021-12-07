@@ -21,17 +21,17 @@ export const CommentInput = styled.input`
 `;
 
 function Login() {
-    const url = "http://localhost:8080/login"
+    const url = "/login"
     const [data, setData] = useState({
-        userID:"",
-        userPW:""
+        loginId:"",
+        password:""
     })
 
     function submit(e){
         e.preventDefault();
         axios.post(url,{
-            userID: data.userID,
-            userPW: data.userPW
+            loginId: data.loginId,
+            password: data.password
         },{
             headers: {'Content-Type': 'application/json'}
             }).then(res=>{
@@ -54,8 +54,8 @@ function Login() {
             <Subtitle top="10px">로그인</Subtitle>
             <form onSubmit={(e)=> submit(e)}>
                 <Column>
-                <Input onChange={(e)=>handle(e)} id="userID" value={data.userID} placeholder="아이디"/>
-                <Input onChange={(e)=>handle(e)} id="userPW" value={data.userPW} placeholder="비밀번호"/>
+                <Input onChange={(e)=>handle(e)} id="loginId" value={data.loginId} placeholder="아이디"/>
+                <Input onChange={(e)=>handle(e)} id="password" value={data.password} placeholder="비밀번호"/>
                 <Submitbutton mt='30px' ml='300px' type="submit" value={"로그인 →"}></Submitbutton>
                 </Column>
             </form>
