@@ -8,8 +8,8 @@ import Mypage from "./Screens/Mypage";
 import routes from "./routes";
 import Header from "./Components/Header";
 import { GlobalStyles } from "./styles";
-import { useState } from "react";
-import GetData from './data/GetData';
+import { useState, useEffect } from "react";
+import axios from 'axios';
 
 import data0 from "./data/data0";
 import data1 from "./data/data1";
@@ -24,6 +24,17 @@ import data99 from "./data/data99";
 import data100 from "./data/data100";
 
 function App() {
+
+/* axios GET
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+  axios.get('https://jsonplaceholder.typicode.com/users')
+  .then(res => {
+    console.log(res);
+    setPosts(res.data);
+  });
+  }, []); 
+*/
 
   //로그인상태
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -50,7 +61,6 @@ function App() {
     <GlobalStyles />
       <Router>
         <Header isLoggedIn={isLoggedIn} logout={logout} />
-        <GetData />
         <Switch>
           <Route path={routes.home} exact>
             <Home 
