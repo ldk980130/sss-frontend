@@ -2,33 +2,33 @@
 /* 마이페이지 내가 쓴 글 데이터 */
 export default [
     {
-        id : 0,
+        postId : 0,
         title : "내가 쓴 글",
         content : "내가 쓴 글입니당",
-        author :'나',
+        nickName :'나',
     },
     {
-        id : 1,
+        postId : 1,
         title : "내가 쓴 글22",
         content : "2222222222",
-        author :'나',
+        nickName :'나',
     },
     {
-        id : 2,
+        postId : 2,
         title : "내가 쓴 글333333",
         content : "내가 쓴 글입니3333333당",
-        author :'나',
+        nickName :'나',
     },
     {
-        id : 3,
+        postId : 3,
         title : "내가 쓴 글343433333",
         content : "내가 쓴 글입니3333333당",
-        author :'나',
+        nickName :'나',
     },
     {
-        id : 4,
+        postId : 4,
         title : "내가 쓴 글333555333",
         content : "내가 쓴 글입니3333333당",
-        author :'나',
+        nickName :'나',
     }
   ]
