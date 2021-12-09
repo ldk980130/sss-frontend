@@ -48,8 +48,8 @@ function Signup() {
             <form onSubmit={(e)=> submit(e)}>
             <Column>
                 <Input onChange={(e)=>handle(e)} id="loginId" value={data.loginId} placeholder="아이디(16자 미만)"></Input>
-                <Input onChange={(e)=>handle(e)} id="password" value={data.password} placeholder="비밀번호 (영문 + 숫자 조합)"></Input>
-                <Input onChange={(e)=>handle(e)} id="password" value={data.password}placeholder="비밀번호 확인"></Input>
+                <Input onChange={(e)=>handle(e)} id="password" type="password" value={data.password} placeholder="비밀번호 (영문 + 숫자 조합)"></Input>
+                <Input onChange={(e)=>handle(e)} id="password" type="password" value={data.password}placeholder="비밀번호 확인"></Input>
                 <Input onChange={(e)=>handle(e)} id="nickName" value={data.nickName}placeholder="닉네임(12자 미만)"></Input>
                 <Input onChange={(e)=>handle(e)} id="name" value={data.name}placeholder="이름"></Input>
                 <Input onChange={(e)=>handle(e)} id="email" value={data.email}placeholder="이메일"></Input>

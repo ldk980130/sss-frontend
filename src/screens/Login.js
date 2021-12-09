@@ -55,7 +55,7 @@ function Login() {
             <form onSubmit={(e)=> submit(e)}>
                 <Column>
                 <Input onChange={(e)=>handle(e)} id="loginId" value={data.loginId} placeholder="아이디"/>
-                <Input onChange={(e)=>handle(e)} id="password" value={data.password} placeholder="비밀번호"/>
+                <Input onChange={(e)=>handle(e)} id="password" type="password" value={data.password} placeholder="비밀번호"/>
                 <Submitbutton mt='30px' ml='300px' type="submit" value={"로그인 →"}></Submitbutton>
                 </Column>
             </form>

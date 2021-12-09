@@ -25,8 +25,6 @@ import data100 from "./data/data100";
 
 function App() {
 
-
-
   //로그인상태
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   //임시
