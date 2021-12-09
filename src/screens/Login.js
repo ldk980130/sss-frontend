@@ -30,8 +30,8 @@ function Login() {
     function submit(e){
         e.preventDefault();
         axios.post(url,{
-            userID: data.userID,
-            userPW: data.userPW
+            loginId: data.loginId,
+            password: data.password
         },{
             headers: {'Content-Type': 'application/json'}
             }).then(res=>{
