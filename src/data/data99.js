@@ -1,65 +1,65 @@
 /* eslint-disable */
 export default [
     {
-        id : 0,
+        postId : 0,
         title : "안녕하세여",
         content : "ㅎㅇㅎㅇ",
-        author :'작성자A',
+        nickName :'작성자A',
     },
   
     {
-        id : 1,
+        postId : 1,
         title : "ㅎㅇㅎㅇㅎㅇ",
         content : "ㅎwefdfsfsdㅎ앟앙하sdfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafsazfxcvfdsfdaaaaaaaㅇ",
-        author : 'B'
+        nickName : 'B'
     },
   
     {
-        id : 2,
+        postId : 2,
         title : "ㅎㅇㅎㅎㅎㅎㅎ",
         content : "^^",
-        author : 'C'
+        nickName : 'C'
     },
 
     {
-        id : 3,
+        postId : 3,
         title : "ㅎ",
         content : "테스트",
-        author : 'D'
+        nickName : 'D'
     },
     
     {
-        id : 4,
+        postId : 4,
         title : "4",
         content : "444",
-        author : 'E'
+        nickName : 'E'
     }, 
 
     {
-        id : 5,
+        postId : 5,
         title : "5",
         content : "455544",
-        author : 'F'
+        nickName : 'F'
     },
 
     {
-        id : 6,
+        postId : 6,
         title : "4",
         content : "444",
-        author : 'E'
+        nickName : 'E'
     }, 
 
     {
-        id : 7,
+        postId : 7,
         title : "5",
         content : "455544",
-        author : 'F'
+        nickName : 'F'
     },
 
     {
-        id : 8,
+        postId : 8,
         title : "4",
         content : "444",
-        author : 'E'
+        nickName : 'E'
     }
   ]

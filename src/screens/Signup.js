@@ -40,6 +40,7 @@ function Signup() {
         setData(newdata)
         console.log(newdata)
     }
+
     return (
         <>
         <Container>

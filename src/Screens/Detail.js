@@ -37,7 +37,7 @@ const ReportBox = styled.div`
 const Detail = (props) => {
     let { id } = useParams(); // URL의 /:id 파라미터 값
     let viewpost = props.post.find(function(post){ //find 함수로 Array 안에서 원하는 자료를 찾는다
-        return post.id == id //현재 URL의 /:id 값과 게시글의 고유 id가 일치한다면 변수로 저장
+        return post.postId == id //현재 URL의 /:id 값과 게시글의 고유 id가 일치한다면 변수로 저장
       });
     
     const [recommend, setRecommend] = useState(0);
@@ -48,7 +48,7 @@ const Detail = (props) => {
         <Container>
             { reportModal === true ? <ReportModal setReportModal={setReportModal} /> : null } 
             <Box width='800px'>
-                <Text size='23px'>{ viewpost.title }</Text><Text size='12px'> { viewpost.author }</Text>
+                <Text size='23px'>{ viewpost.title }</Text><Text size='12px'> { viewpost.nickName }</Text>
                 <hr/>
                 <Text size='17px'>{ viewpost.content }</Text>
                 <Column>
