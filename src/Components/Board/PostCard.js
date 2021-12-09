@@ -7,7 +7,7 @@ const PostCard = (props) => {
     
     return (
     <Col>
-    <Link to={"/detail/" + (props.board) + "/" + (props.i)} style={{ textDecoration: 'none' }}>  {/*detail/게시판id/게시글id*/}
+    <Link to={"/detail/" + (props.board) + "/" + (props.i+1)} style={{ textDecoration: 'none' }}>  {/*detail/게시판id/게시글id*/}
     <Card style={{ width: '300px', height: '120px' }}>
     <Card.Body>
         <Card.Title><Text size='20px'>{ props.post.title }</Text> <Text size='12px'>by { props.post.nickName }</Text></Card.Title>

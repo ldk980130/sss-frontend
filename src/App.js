@@ -25,16 +25,7 @@ import data100 from "./data/data100";
 
 function App() {
 
-/* axios GET
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-  axios.get('https://jsonplaceholder.typicode.com/users')
-  .then(res => {
-    console.log(res);
-    setPosts(res.data);
-  });
-  }, []); 
-*/
+
 
   //로그인상태
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -43,8 +34,7 @@ function App() {
 
   //관리자권한
   const [isMannager, setIsMannager] = useState(true);
-  
-  let [post0, setPost0] = useState(data0);
+
   let [post1, setPost1] = useState(data1);
   let [post2, setPost2] = useState(data2);
   let [post3, setPost3] = useState(data3);
@@ -55,6 +45,15 @@ function App() {
   let [post8, setPost8] = useState(data8);
   let [post99, setPost99] = useState(data99);
   let [post100, setPost100] = useState(data100);
+
+  const [post0, setPost0] = useState([]);
+  useEffect(() => {
+    axios.get('/home')
+        .then(res => {
+          console.log(res);
+          setPost0(res.data);
+        });
+  }, []);
 
   return (
     <>
