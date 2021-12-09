@@ -1,6 +1,8 @@
 import { Container, Box, Submitbutton } from "../Components/shared";
 import styled from "styled-components";
 import Footer from '../Components/Footer';
+import axios from 'axios';
+import { useState } from "react";
 
 export const TextInput = styled.textarea`
     width: 700px;
@@ -18,7 +20,7 @@ export const TextInput = styled.textarea`
 `;
 
 const Create = () => {
-    const url = "/create/post"
+    const url = "/create/"
     const [data, setData] = useState({
         title:"",
         content:"",
@@ -50,10 +52,12 @@ const Create = () => {
     return (
         <>
         <Container>
-            <Box width='800px' pb='20px' onSubmit={(e)=> submit(e)}>
-            <TextInput onChange={(e)=>handle(e)} id="title" value={data.title}  placeholder='제목' height='60px'></TextInput>
-            <TextInput onChange={(e)=>handle(e)} id="content" value={data.content} placeholder='본문' height='500px' mt='20px'></TextInput>
-            <Submitbutton ml='580px' mt='20px' type="submit" value={"글 작성"}></Submitbutton>
+            <Box width='800px' pb='20px'>
+            <form onSubmit={(e)=> submit(e)}>
+                <TextInput onChange={(e)=>handle(e)} id="title" value={data.title}  placeholder='제목' height='60px'></TextInput>
+                <TextInput onChange={(e)=>handle(e)} id="content" value={data.content} placeholder='본문' height='500px' mt='20px'></TextInput>
+                <Submitbutton ml='580px' mt='20px' type="submit" value={"글 작성"}></Submitbutton>
+            </form>
             </Box>
         </Container>
         <Footer />
